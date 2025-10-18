@@ -1,6 +1,6 @@
 export class Device{
     constructor(
-        private id: string,
+        public id: string,
         private name: string,
         private ipAddress: string,
         private status: string,
@@ -14,42 +14,37 @@ export class Device{
     }
 
     /**
-     * @param {string} id
-     * @return {number} UUID | number
+     * @return {string} UUID | number
      */
-    deviceId(id: string) : number{
-        return 0;
+     deviceId() : string{
+        return this.id;
     }
 
      /**
-     * @param {string} name
      * @return {string} name
      */
-     deviceName(name: string) : string{
+      deviceName() : string{
         return this.name;
     }
 
      /**
-     * @param {string} ipAddress
      * @return {number} validipAddress
      */
-     deviceIpAddress(ipAddress: string) : number{
+      deviceIpAddress() : number{
         return 0;
     }
 
      /**
-     * @param {string} status
      * @return {string} offline|online
      */
-     deviceStatus(status: string) : string{
+      deviceStatus() : string{
         return '';
     }
 
      /**
-     * @param {string} lastSeenAt
      * @return {string} ISO timestamp string
      */
-     deviceLastSeenAt(lastSeenAt: string) : string{
+      deviceLastSeenAt() : string{
         return '';
     }
 }
