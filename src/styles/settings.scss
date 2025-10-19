@@ -8,3 +8,10 @@
 // @use 'vuetify/settings' with (
 //   $color-pack: false
 // );
+/* Position FAB at bottom-right */
+.fab-bottom-right {
+    position: fixed;
+    bottom: 20px;
+    right: 24px;
+    z-index: 100;
+  }
