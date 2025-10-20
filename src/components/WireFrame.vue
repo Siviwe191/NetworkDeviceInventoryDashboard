@@ -15,37 +15,37 @@
 
     <v-main>
       <!-- Main content goes here -->
-       <slot></slot>
+      <slot />
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts" setup>
-import { ref, watch } from 'vue'
-import { useTheme } from 'vuetify'
-import SideMenu from './SideMenu.vue'
+  import { ref, watch } from 'vue'
+  import { useTheme } from 'vuetify'
+  import SideMenu from './SideMenu.vue'
 
-// Drawer state
-const drawer = ref<boolean>(false)
+  // Drawer state
+  const drawer = ref<boolean>(false)
 
-// Theme setup
-const theme = useTheme()
-const saved = localStorage.getItem('theme') || 'light'
-theme.global.name.value = saved
-const current = ref(saved)
+  // Theme setup
+  const theme = useTheme()
+  const saved = localStorage.getItem('theme') || 'light'
+  theme.global.name.value = saved
+  const current = ref(saved)
 
-// Watch for changes and persist them
-watch(
-  () => theme.global.name.value,
-  (newVal) => {
-    localStorage.setItem('theme', newVal)
-    current.value = newVal
+  // Watch for changes and persist them
+  watch(
+    () => theme.global.name.value,
+    newVal => {
+      localStorage.setItem('theme', newVal)
+      current.value = newVal
+    },
+  )
+
+  // Toggle between light and dark
+  function toggleTheme () {
+    theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
   }
-)
-
-// Toggle between light and dark
-const toggleTheme = () => {
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
-}
 
 </script>
