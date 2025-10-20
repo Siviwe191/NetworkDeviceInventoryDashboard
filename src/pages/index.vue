@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts" setup>
-import WireFrame from '@/components/WireFrame.vue';
+  import WireFrame from '@/components/WireFrame.vue'
 
   //
-  
+
 </script>
