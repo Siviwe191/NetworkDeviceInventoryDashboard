@@ -58,7 +58,7 @@ Browser cannot perform raw DNS lookups; DNS resolution is handled by the OS/netw
 IP classification is handled on the client but server should validate data as well.
 
 Demo Video:
-<video src="/REC-20251019200052.mp4" width="600" controls></video>
+<a href="https://github.com/Siviwe191/NetworkDeviceInventoryDashboard/REC-20251019200052.mp4" target="_blank"> DEMO VIDEO </a>
 
 
 Light/Dark theme preference is saved to localStorage.
